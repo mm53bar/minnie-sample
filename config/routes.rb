@@ -1,4 +1,10 @@
 MinnieSample::Application.routes.draw do
+  match '/signout' => 'sessions#destroy', :as => :signout
+
+  match '/signin' => 'sessions#new', :as => :signin
+
+  resources :sessions, :only => [:new, :create, :destroy]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
