@@ -4,6 +4,7 @@ MinnieSample::Application.routes.draw do
   match '/signin' => 'sessions#new', :as => :signin
 
   resources :sessions, :only => [:new, :create, :destroy]
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
