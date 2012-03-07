@@ -4,9 +4,15 @@ This is a quick app that shows how to use [minnie](https://github.com/mm53bar/mi
 
 ###Installation
 
-Clone it, bundle it and then run `bin/rails server` to test it out. 
+     git clone git://github.com/mm53bar/minnie-sample.git
+     cd minnie-sample
+     bundle install
+     bin/rake db:migrate
+     bin/rails c
+       User.create :email => 'test@test.com', :password => 'test'
+     bin/rails s
 
-As long as you've created a User model you should be good to go.
+Go to [http://localhost:3000](http://localhost:3000) and log in with the credentials listed above.
 
 ###Issues
 
